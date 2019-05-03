@@ -6,6 +6,7 @@ The exercise is to use the 'requests' package and 'json'
 ## Objectives are:
 - make a new project
 - add git and git hub
+    -have a gitignore
 - create a simple README.md file
 
 technical specs:
