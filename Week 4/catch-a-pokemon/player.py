@@ -1,5 +1,6 @@
 from connect_player import*
 import random
+from pokemon import Pokemon
 
 class Player():
 
@@ -16,19 +17,21 @@ class Player():
 
 
     def __try_catch_pokemon(self):
-        user_input = input('Would you like to try and catch this pokemon?')
+        user_input = input('Would you like to try and catch this pokemon (y/n)?')
         if user_input == 'y':
-            print('Thowing Pokeball!')
-            catch = random.randint(0, 10)
-            if catch >= 5:
-                poke = Pokemon(self.name)
-                poke.get_name()
-                new_pokemon = print('You caught a..', poke.name)
+            print('Catching!')
+            catch = random.randint(0, 100)
+            if catch >= 50:
+                caught = Pokemon(self.name)
+                caught.get_name()
+                new_pokemon = print('You caught a..', caught.name)
                 self.pokemon_caught.append(new_pokemon)
-                self.save_player_and_pokemon('' , '' , f'{poke.name}')
+                self.save('' , '' , f'{caught.name}')
 
-            elif catch <= 5:
+            elif catch <= 50:
                 print('The pokemon got away, better luck next time')
+        else:
+            print('Goodbye, thanks for playing')
 
     def search_for_pokemon(self):
         print('Searching for a pokemon!')
