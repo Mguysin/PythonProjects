@@ -2,6 +2,7 @@ from connect_player import*
 import random
 from pokemon import Pokemon
 
+
 class Player():
 
     def __init__(self, name):
@@ -57,7 +58,7 @@ class Player():
             players = sql_query_no_transaction("SELECT * FROM player")
             for player in players:
                 print(f"Name: {player.Name}\nCity: {player.City}\nPokemon caught: {player.Pokemon_caught}")
-                Player(player.Name, player.City)
+                Player(player.Name, player.City, player.Pokemon_caught)
             print('Operation complete, read successful')
 
         except Exception as errmsg:
