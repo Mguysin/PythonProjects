@@ -33,7 +33,7 @@ while True:
             continue
 
     elif user_input == 2:
-        print('Please see below Cargo list')
+        print('Please see below the list')
         pokemon.load()
 
     else:

@@ -15,17 +15,26 @@ class Player():
     #     pass
 
 
-    def search_for_pokemon(self):
-        print('Looking for pokemon')
-        looking = random.randint(0,10)
-        if looking >= 5:
-            print('You found a pokemon')
-        if looking <= 5:
-            print('You did not find a pokemon')
-
-
     def __try_catch_pokemon(self):
-        pass
+        user_input = input('Would you like to try and catch this pokemon?')
+        if user_input == 'y':
+            print('Thowing Pokeball!')
+            catch = random.randint(0, 10)
+            if catch >= 5:
+                poke = Pokemon(self.name)
+                poke.get_name()
+                new_pokemon = print('You caught a..', poke.name)
+                self.pokemon_caught.append(new_pokemon)
+                self.save_player_and_pokemon('' , '' , f'{poke.name}')
+
+            elif catch <= 5:
+                print('The pokemon got away, better luck next time')
+
+    def search_for_pokemon(self):
+        print('Searching for a pokemon!')
+        self.__try_catch_pokemon()
+
+
 
 
     def save(self, name='', city='', pokemon_caught=''):

@@ -14,25 +14,25 @@ docker_Pokemon = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='
 
 #Creating a cursor that can execute SQL funtions on connected db
 cursor = docker_Pokemon.cursor()
-
-# Executing the SQL
-cursor.execute("SELECT * FROM player")
-
-#Getting the rows out of the results of the execution
-
-rows = cursor.fetchall()
-
-description = cursor.description
-
-# print(len(rows))
 #
-# print(type(rows))
-
-
-
-for row in rows:
-
-    print(row.Name)
+# # Executing the SQL
+# cursor.execute("SELECT * FROM player")
+#
+# #Getting the rows out of the results of the execution
+#
+# rows = cursor.fetchall()
+#
+# description = cursor.description
+#
+# # print(len(rows))
+# #
+# # print(type(rows))
+#
+#
+#
+# for row in rows:
+#
+#     print(row.Name)
 
 #
 #
