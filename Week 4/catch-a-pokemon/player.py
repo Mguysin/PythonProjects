@@ -30,7 +30,7 @@ class Player():
                 self.save('' , '' , f'{caught.name}')
 
             elif catch <= 50:
-                print('The pokemon got away, better luck next time')
+                print('No pokemon found this time')
         else:
             print('Goodbye, thanks for playing')
 

@@ -6,7 +6,7 @@ pokemon = Pokemon(name='')
 def new_player():
     input_1 = input('What is your name?')
     input_2 = input(f'What city are you from?')
-    player.save(f'{input_1}', f'{input_2}',)
+    player.save(f'{input_1}', f'{input_2}', '')
     Player(player.name)
 
 print('Welcome to the Pokemon game')
