@@ -23,6 +23,7 @@ class Player():
             print('Catching!')
             catch = random.randint(0, 100)
             if catch >= 50:
+                #Think about what self.name is
                 caught = Pokemon(self.name)
                 caught.get_name()
                 new_pokemon = print('You caught a..', caught.name)
@@ -48,7 +49,7 @@ class Player():
             print('The table has been updated, 1 row affected')
 
         except Exception as errmsg:
-            print('There has been a error the record has not been committed, please see below exception message')
+            print('There has been a error the record has not been committed, please try again')
             print(errmsg)
 
 

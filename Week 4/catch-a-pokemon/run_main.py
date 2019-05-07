@@ -15,7 +15,7 @@ new_player()
 print('Thank you for submitting details, please proceed to the game')
 player.search_for_pokemon()
 while True:
-    user_input = input('Would you like to search again?')
+    user_input = input('Would you like to try again?')
     if user_input == 'y':
         player.search_for_pokemon()
     else:
